@@ -1,3 +1,5 @@
-import {Mongo} from 'meteor/Mongo';
-
-export const Hackers = new Mongo.Collection('hackers');
+Template.hackerList.helpers({
+  'Hackers': function() {
+    return Hackers.find();
+  }
+});
