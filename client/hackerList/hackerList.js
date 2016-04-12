@@ -1,4 +1,3 @@
-Meteor.subscribe('hackers');
 
 Template.hackerList.helpers({
   'Hackers': function() {
@@ -6,3 +5,6 @@ Template.hackerList.helpers({
   }
 });
 
+Template.hackerList.onCreated(function (){
+  Meteor.subscribe('hackers');
+});
