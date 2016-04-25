@@ -1,5 +1,5 @@
 {
-  "name": "applicant-page",
+  "name": "hacker-pages",
   "private": true,
   "scripts": {
     "start": "meteor run"
