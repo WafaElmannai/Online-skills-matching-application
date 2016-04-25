@@ -1,0 +1,65 @@
+<template name="newApplicantForm">
+  <div class="row">
+    <div class="col-xs-8 col-xs-offset-2">
+      <h1>Add a Applicant</h1>
+      <hr />
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-8 col-xs-offset-2">
+      <form id="applicantForm" class="form-horizontal">
+
+        <div class="form-group">
+          <label for="applicantName" class="control-label col-xs-2">Applicant Name</label>
+          <div class="col-xs-10">
+            <input id="applicantName" class="form-control" type="text" placeholder="Enter your name...">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="current-job" class="control-label col-xs-2"> Current Job</label>
+          <div class="col-xs-10">
+            <input id="currentJob" class="form-control" type="text" placeholder="Eneter your current job if you have one...">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email" class="control-label col-xs-2">Email</label>
+          <div class="col-xs-10">
+            <input id="email" class="form-control" type="email" placeholder="me@emaple.com...">
+          </div>
+        </div>
+
+<!--         <div class="form-group">
+          <label for="skills" class="control-label col-xs-2">Skills</label>
+          <div class="col-xs-10">
+            <select id="skills" class="form-control">
+              <option>C#</option>
+              <option>Java</option>
+              <option>Ruby</option>
+            </select>
+          </div>
+        </div>
+ -->
+     <div class="form-group">
+      <label for="skills" class="control-label col-xs-2">Skills</label>
+        <div class="col-xs-10">
+           <input type="checkbox" name="skills" value="C">C<br/>
+           <input type="checkbox" name="skills" value="C      harp">C#<br/>
+           <input type="checkbox" name="skills" value="C plus plus">C++<br/>
+           <input type="checkbox" name="skills" value="Ruby">Ruby<br/>
+           <input type="checkbox" name="skills" value="HTML, CSS">HTML, CSS<br/>
+           <input type="checkbox" name="skills" value="Java">Java<br/>
+       </div>
+     </div>
+
+        <div class="form-group">
+          <div class="col-xs-8 col-xs-offset-2">
+            <button id="submitApplicant" class="btn btn-default">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</template>

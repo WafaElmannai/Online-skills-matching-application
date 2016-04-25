@@ -1,18 +1,19 @@
-<template name="hackerList">
+<template name="applicantList">
   <div class="row">
     <div class="col-xs-4 col-xs-offset-4">
-      <h1>Hackers</h1>
+      <h1>Applicants</h1>
       <hr />
     </div>
   </div>
 
   <div class="row">
     <div class="col-xs-4 col-xs-offset-4">
-      {{ #each Hackers }}
-        <h4>{{ hackerName }}</h4>
+      {{ #each Applicants }}
+        <h4>{{ applicantName }}</h4>
         {{ #if createdByUser }}
-        <p><strong>Legal Name:</strong> {{ legalName }}</p>
+<!--         <p><strong> Name:</strong> {{ Name }}</p> -->
         <p><strong>Email:</strong> {{ email }}</p>
+        <p><strong>Skills:</strong> {{skills }}</p>
         {{ /if}}
         <br />
       {{ /each }}
