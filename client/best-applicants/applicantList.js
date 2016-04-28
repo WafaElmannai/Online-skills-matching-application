@@ -10,5 +10,4 @@ Template.applicantList.helpers({
 
 Template.applicantList.onCreated(function (){
   Meteor.subscribe('applicants');
-  console.log("ggggg");
 });
