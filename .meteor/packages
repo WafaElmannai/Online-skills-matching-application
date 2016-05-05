@@ -21,3 +21,6 @@ twbs:bootstrap
 iron:router
 ian:accounts-ui-bootstrap-3
 accounts-password
+semantic:ui-dropdown
+semantic:ui-transition
+session

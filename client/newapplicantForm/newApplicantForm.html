@@ -1,8 +1,10 @@
 <template name="newApplicantForm">
+<div class="container" id ="newApplicant">
+  <div class="well">
   <div class="row">
     <div class="col-xs-8 col-xs-offset-2">
-      <h1>Add a Applicant</h1>
-      <hr />
+      <h1>New Applicant</h1>
+      <hr>
     </div>
   </div>
 
@@ -11,55 +13,95 @@
       <form id="applicantForm" class="form-horizontal">
 
         <div class="form-group">
-          <label for="applicantName" class="control-label col-xs-2">Applicant Name</label>
-          <div class="col-xs-10">
+          <label for="applicantName" class="control-label col-xs-4">Applicant Name</label>
+          <div class="col-xs-8">
             <input id="applicantName" class="form-control" type="text" placeholder="Enter your name...">
           </div>
         </div>
 
         <div class="form-group">
-          <label for="current-job" class="control-label col-xs-2"> Current Job</label>
-          <div class="col-xs-10">
-            <input id="currentJob" class="form-control" type="text" placeholder="Eneter your current job if you have one...">
+          <label for="current-job" class="control-label col-xs-4"> Current Job</label>
+          <div class="col-xs-8">
+            <input id="currentJob" class="form-control" type="text" placeholder="Enter your current job if you have one...">
           </div>
         </div>
 
         <div class="form-group">
-          <label for="email" class="control-label col-xs-2">Email</label>
-          <div class="col-xs-10">
-            <input id="email" class="form-control" type="email" placeholder="me@emaple.com...">
+          <label for="email" class="control-label col-xs-4">Email</label>
+          <div class="col-xs-8">
+            <input id="email" class="form-control" type="email" placeholder="me@example.com...">
           </div>
         </div>
-
-<!--         <div class="form-group">
-          <label for="skills" class="control-label col-xs-2">Skills</label>
-          <div class="col-xs-10">
-            <select id="skills" class="form-control">
-              <option>C#</option>
-              <option>Java</option>
-              <option>Ruby</option>
-            </select>
-          </div>
-        </div>
- -->
-     <div class="form-group">
-      <label for="skills" class="control-label col-xs-2">Skills</label>
-        <div class="col-xs-10">
-           <input class="skillscheckbox" type="checkbox" name="skills" value="C">C<br/>
-           <input class="skillscheckbox" type="checkbox" name="skills" value="C #">C#<br/>
-           <input class="skillscheckbox" type="checkbox" name="skills" value="C ++ ">C++<br/>
-           <input class="skillscheckbox" type="checkbox" name="skills" value="Ruby">Ruby<br/>
-           <input class="skillscheckbox" type="checkbox" name="skills" value="HTML, CSS">HTML, CSS<br/>
-           <input class="skillscheckbox" type="checkbox" name="skills" value="Java">Java<br/>
-       </div>
-     </div>
 
         <div class="form-group">
-          <div class="col-xs-8 col-xs-offset-2">
-            <button id="submitApplicant" class="btn btn-default">Submit</button>
+          <label for="phoneNumber" class="control-label col-xs-4">Phone Number</label>
+          <div class="col-xs-8">
+          <input id="phoneNumber" class="form-control" type="text" maxlength="10" >
+      </div>
+    </div>
+
+        
+<div class="form-group">
+<div class="ui sub header control-label col-xs-4"><strong>Skills</strong></div>
+<div class="col-xs-8">
+<select name="skills" id="skills" multiple="" class="ui fluid dropdown skills">
+<option value="">Skills</option>
+<option value="angular">Angular</option>
+<option value="css">CSS</option>
+<option value="design">Graphic Design</option>
+<option value="ember">Ember</option>
+<option value="html">HTML</option>
+<option value="ia">Information Architecture</option>
+<option value="javascript">Javascript</option>
+<option value="mech">Mechanical Engineering</option>
+<option value="meteor">Meteor</option>
+<option value="node">NodeJS</option>
+<option value="plumbing">Plumbing</option>
+<option value="python">Python</option>
+<option value="rails">Rails</option>
+<option value="react">React</option>
+<option value="repair">Kitchen Repair</option>
+<option value="ruby">Ruby</option>
+<option value="ui">UI Design</option>
+<option value="ux">User Experience</option>
+</select>
+</div>
+</div>
+
+  <hr>
+{{> level}}
+        <div class="form-group">
+          <div class="col-xs-12">
+            <button id="submitApplicant" class="btn btn-default">Save</button>
           </div>
         </div>
+
       </form>
+
     </div>
   </div>
+  </div>
+
+  
+
+
+
+  </div>
+</template>
+
+<template name="level">
+<div class="form-group " >
+<h2>Select your level of each skill</h2>
+{{#each skillsList}}
+{{this}}
+<form action="" id="radioForm">
+<input name="level0" class="{{this}}" type="radio" value="0"/> 0
+<input name="level0" class="{{this}}" type="radio" value="1"/> 1
+<input name="level0" class="{{this}}" type="radio" value="2"/> 2
+<input name="level0" class="{{this}}" type="radio" value="3"/> 3
+<input name="level0" class="{{this}}" type="radio" value="4"/> 4
+<input name="level0" class="{{this}}" type="radio" value="5"/> 5
+</form>
+{{/each}}
+</div>
 </template>

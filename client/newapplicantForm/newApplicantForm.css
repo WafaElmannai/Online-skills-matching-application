@@ -1,0 +1,33 @@
+.well
+{
+    max-height: 50%;
+    margin-top: 5%;
+    border: 1px solid #00b2ef;
+    border-radius: 10px;
+}
+
+
+.btn-default
+{
+	background-color: #7f8181;
+	color: #ffffff;
+	border: 1px #040707;
+}
+
+h1 {
+	text-align: center;
+}
+
+.label {
+	color: black;
+}
+
+.ui sub header {
+	font-style: bold;
+}
+
+#submitApplicant {
+	float: right;
+	margin-top: 2%;
+	background-color: green;
+}
