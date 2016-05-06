@@ -1,44 +1,39 @@
-<template name="newApplicantForm">
-<div class="container" id ="newApplicant">
+<template name="newJobForm">
+<div class="container" id ="newJob">
   <div class="well">
   <div class="row">
     <div class="col-xs-8 col-xs-offset-2">
-      <h1>New Applicant</h1>
+      <h1>Post Job</h1>
       <hr>
     </div>
   </div>
 
   <div class="row">
     <div class="col-xs-8 col-xs-offset-2">
-      <form id="applicantForm" class="form-horizontal">
-
-        <div class="form-group">
-          <label for="applicantName" class="control-label col-xs-4">Applicant Name</label>
+      <form id="jobForm" class="form-horizontal">
+      
+      <div class="form-group">
+          <label for="jobName" class="control-label col-xs-4">job Name</label>
           <div class="col-xs-8">
-            <input id="applicantName" class="form-control" type="text" placeholder="Enter your name...">
+            <input id="jobName" class="form-control" type="text" placeholder="e.g: Web developer...">
           </div>
         </div>
 
         <div class="form-group">
-          <label for="current-job" class="control-label col-xs-4"> Current Job</label>
+          <label for="jobType" class="control-label col-xs-4">job Type</label>
           <div class="col-xs-8">
-            <input id="currentJob" class="form-control" type="text" placeholder="Enter your current job if you have one...">
+            <input id="jobType" class="form-control" type="text" placeholder="e.g: Full time...">
           </div>
         </div>
 
         <div class="form-group">
-          <label for="email" class="control-label col-xs-4">Email</label>
+          <label for="jobDescription" class="control-label col-xs-4"> Job Description</label>
           <div class="col-xs-8">
-            <input id="email" class="form-control" type="email" placeholder="me@example.com...">
+            <textarea rows="4" cols="50" id="jobDescription" class="form-control" type="text" placeholder="enter the description of the job..."> </textarea>
           </div>
         </div>
 
-        <div class="form-group">
-          <label for="phoneNumber" class="control-label col-xs-4">Phone Number</label>
-          <div class="col-xs-8">
-          <input id="phoneNumber" class="form-control" type="text" maxlength="10" >
-      </div>
-    </div>
+
 
         
 <div class="form-group">
@@ -69,10 +64,10 @@
 </div>
 
   <hr>
-{{> level}}
+{{> level2}}
         <div class="form-group">
           <div class="col-xs-12">
-            <button id="submitApplicant" class="btn btn-default">Save</button>
+            <button id="submitJob" class="btn btn-default">Save</button>
           </div>
         </div>
 
@@ -89,10 +84,10 @@
   </div>
 </template>
 
-<template name="level">
+<template name="level2">
 <div class="form-group " >
+<h3>Select a level of each skill</h3>
 {{#each skillsList}}
-<h3>Level</h3>
 {{this}}
 <form action="" id="radioForm">
 <input name="level0" class="{{this}}" type="radio" value="0"/> 0

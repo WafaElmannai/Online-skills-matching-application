@@ -1,0 +1,32 @@
+<template name="jobList">
+  <div class="row">
+    <div class="col-xs-4 col-xs-offset-4">
+      <h1> Jobs List</h1>
+      <hr />
+    </div>
+  </div>
+
+<div class="well cover">
+
+
+{{#each Jobs}}
+<h4>{{jobName}}</h4>
+<div class="well">
+  <div class="row">
+    <h4>Job Information</h4>
+    <div class="col-xs-6 col-xs-offset-2">
+      <p><strong>Job Type:</strong>{{ jobType }}</p>
+      <p><strong>Job Description:</strong> {{ jobDescription }}</p>
+        <p><strong>Skills/level: </strong></p>
+        {{#each skills }}
+          {{this.skill}}: {{this.level}}
+        {{/each}}
+        <br/>
+    </div>
+  </div>
+  </div>
+{{ /each }}
+
+</div>
+ </template>
+

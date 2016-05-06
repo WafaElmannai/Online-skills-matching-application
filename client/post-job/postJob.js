@@ -4,15 +4,16 @@ import { ReactiveVar } from 'meteor/reactive-var';
 
 if(Meteor.isClient) {
 
-Template.level.helpers({
+Template.level2.helpers({
 'skillsList':function() {
    SkillsList =[];
    SkillsList= Session.get ('SkillsList');
    return SkillsList
+
 }
 });
 
-Template.newApplicantForm.events({
+Template.newJobForm.events({
      'click .skills':function(){
       event.preventDefault();
         skills = [];
@@ -24,13 +25,13 @@ Template.newApplicantForm.events({
         Session.set('SkillsList',skillsList);
     } ,
 
-    'submit #applicantForm' : function(event, template) {
+'submit #jobForm' : function(event, template) {
     event.preventDefault();
-    const applicantName = template.find('#applicantName').value;
-    const currentJob = template.find('#currentJob').value;
-    const email = template.find('#email').value;
-    const phoneNumber = template.find('#phoneNumber').value;
-    var skills=[];
+    const jobName = template.find('#jobName').value;
+    const jobType = template.find('#jobType').value;
+    const jobDescription = template.find('#jobDescription').value;
+
+    var jobSkills=[];
     var inputElementslevel =[];
      inputElementslevel= document.getElementsByClassName('level0');
     var inputElementsskills =  Session.get ('SkillsList');
@@ -39,23 +40,20 @@ Template.newApplicantForm.events({
     skills.push({'skill':inputElementsskills[i], 'level':level});
   }
 
-  
-    const newApplicant = {
-      applicantName: applicantName,
-      currentJob: currentJob,
-      email: email, 
-      phoneNumber: phoneNumber,
+    const newJob = {
+      jobName: jobName,
+      jobType: jobType,
+      jobDescription: jobDescription, 
       skills: skills,
       createdBy: Meteor.userId()
     }
-    Meteor.call('applicants.insert', newApplicant);
-    alert('Just added your information');
+    Meteor.call('jobs.insert', newJob);
+    alert('Just added a new job');
   }
-
+ 
 });
 }
-
-Template.newApplicantForm.onRendered(function () {
+Template.newJobForm.onRendered(function () {
 $('.ui.dropdown')
   .dropdown({
     allowAdditions: true

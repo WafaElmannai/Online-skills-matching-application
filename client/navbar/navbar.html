@@ -1,26 +1,137 @@
 
 <template name="navbar">
+<img  src="https://ugacareercenter.files.wordpress.com/2013/01/skills.jpg"  width="150" height="100">
 
 	<div class="navbar navbar-default" role="navigation">
 	<div class="navbar-collapse ">
 	<ul class="nav navbar-nav navbar-right">
 	{{> loginButtons}}
-	<li><a href="/login">Test login</a></li>
 	</ul>
-
 	<div class="row">
 	<ul class="nav navbar-nav navbar-left">
-
+		<li><a href="/">Home</a></li>
 		<li><a href="/new-applicant">Applicants</a></li>
-		<li><a href="#">Companies</a></li>
-		<li><a href="#">Others</a></li>
+		<li><a href="/new-company">Companies</a></li>
+		<li><a href="/new-job">Post Job</a></li>
+		<li><a href="/list-applicants">Matched Applicants</a></li>
+		<li><a href="/list-jobs">Jobs List</a></li>
 		<li><a href="#">About</a></li>
 
 	</ul>
 	</div>
 	</div>
 	</div> 
+<div class="image">
+<img id="mainimg" src="http://m.c.lnkd.licdn.com/mpr/mpr/p/8/005/0b7/2e1/007b75f.jpg" 
+alt="SkillsMatcher" >
+<h2><span>SkillsMatcher:<span class='spacer'></span><br /><span class='spacer'></span>Rea!Match</span></h2>
+</div>
 
+<div class="body-section container soultion">
+        <div class="col-lg-4 col-md-4 ">
+            <h3>
+                <span id="ctl00_ctl00_body_PageItem2"><span><span style="font-weight: bold;">Quality Applicants</span> </span></span>
+            </h3>
+        </div>
+        <div class="col-lg-8 col-md-8 body-content">
+            <span id="ctl00_ctl00_body_PageItem3"><span class="UnderBannerText">SkillsMatcher aims to help many companies and apllicants each year find the best talent fast with the only programmatic recruitment advertising platform designed to deliver superior job ad performance and higher quality applicants at the same time. Our data-driven recruitment solution features the industry’s most advanced job matching technology and ad distribution algorithms that automatically target the right job seekers across 1000's of job sites—all with a single post. That's techno lingo that translates into much less work for you along with reduced time-to-hire and greater ROI for&nbsp; your organization.<br><p style="margin: 0px; text-align: center;"><br><span style="font-weight: bold; font-size: 24pt; color: #82bc00;">Hire/Got Hired Faster, Smarter, and for Less!</span><br></p><p style="margin: 0px; text-align: center;"><span style="font-weight: bold; font-size: 14pt; color: #3bb0c9;">Programmatic Job Advertising Optimized for Performance &amp; Quality</span><br></p><br><p style="margin: 0px; text-align: center;"><img src="http://images.experience.com/entry-level-jobs/wp-content/uploads/2012/03/job_search.jpg" vspace="0" hspace="0" border="0" align="middle" title="Programmatic Recruitment Advertising"  alt="Programmatic Recruitment Advertising"><br></p><p style="margin: 0px; text-align: center;"><br></p><p style="margin: 0px; text-align: center;"><span style="color: #8a8a8d;">__________________</span></p><br><p></p><p style="margin: 0px; text-align: center;"><span style="font-size: 18pt; color: #82bc00;">Save Time and Improve Applicant Quality</span><br></p><br>It's time to forget about the time-consuming process of choosing where to post your jobs with no guarantee of results. It's time to stop worrying if the wrong clicks from irrelevant job seekers will consume your CPC budget. Let SkillsMatcher help you take back your precious time and peace of mind. We automate the process of advertising your open requisitions and get them to the right job seekers, on the right sites, at the right time. <p style="margin: 0px; text-align: center;"><span style="color: #8a8a8d;">__________________<br><br></span></p><p style="margin: 0px; text-align: center;"><span style="font-size: 18pt; color: #82bc00;">Reduce Your Time-to-Hire and Improve Your ROI</span></p><br>SkillsMatcher  offers flexible hiring solutions for mid-to-large employers that work  hand-in-hand with your hiring strategies, needs, and budget. Best of all, getting  started is easy. One of our talent acquisition experts can help you determine the best option for your organization. <ul><li><p style="margin: 0px; text-align: left;"><span style="color: #3bb0c9;"></span> Risk-free Pay-Per-Applicant Service</p></li><li><p style="margin: 0px; text-align: left;">Bulk Performance-Based Posting Packages</p></li><li><p style="margin: 0px; text-align: left;">Monthly Subscription Packages<br></p></li></ul><div class="text-center">                    
+
+		</div><p style="margin: 0px; text-align: center;"><span style="color: #8a8a8d;">__________________<br><br></span></p><p style="margin: 0px; text-align: center;"><span style="font-size: 18pt; color: #82bc00;">Learn More</span></p><p style="margin: 0px; text-align: center;"><br></p><p style="margin: 0px; text-align: left;">SkillsMatcher's recruitment advertising platform is designed to deliver performance, quality and value when it comes to sourcing top talent. <br></p><p style="margin: 0px; text-align: center;"><span style="font-size: 18pt;"><br></span></p><div class="text-center">                    <p style="margin: 0px; text-align: center;">                        </p></div><br></span></span>
+
+        </div>
+    </div>
+</template>
+<!-- 
+<template name="Applicant">
+<img  src="https://ugacareercenter.files.wordpress.com/2013/01/skills.jpg"  width="150" height="100">
+
+	<div class="navbar navbar-default" role="navigation">
+	<div class="navbar-collapse ">
+	<ul class="nav navbar-nav navbar-right">
+	{{> loginButtons}}
+	</ul>
+	<div class="row">
+	<ul class="nav navbar-nav navbar-left">
+		<li><a href="/">Home</a></li>
+		<li><a href="/new-applicant">Applicants</a></li>
+		<li><a href="/new-company">Companies</a></li>
+		<li><a href="/new-job">Post Job</a></li>
+		<li><a href="/list-applicants">Matched Applicants</a></li>
+		<li><a href="#">About</a></li>
+
+	</ul>
+	</div>
+	</div>
+	</div> 
+<div class="image">
+
+
+<img id="mainimg" src="http://m.c.lnkd.licdn.com/mpr/mpr/p/8/005/0b7/2e1/007b75f.jpg" 
+alt="SkillsMatcher" >
+<h2><span>SkillsMatcher:<span class='spacer'></span><br /><span class='spacer'></span>Rea!Match</span></h2>
+</div>
+
+<div class="body-section container soultion">
+        <div class="col-lg-4 col-md-4 ">
+            <h3>
+                <span id="ctl00_ctl00_body_PageItem2"><span><span style="font-weight: bold;">Quality Applicants</span> </span></span>
+            </h3>
+        </div>
+        <div class="col-lg-8 col-md-8 body-content">
+            <span id="ctl00_ctl00_body_PageItem3"><span class="UnderBannerText">SkillsMatcher aims to help many companies and apllicants each year find the best talent fast with the only programmatic recruitment advertising platform designed to deliver superior job ad performance and higher quality applicants at the same time. Our data-driven recruitment solution features the industry’s most advanced job matching technology and ad distribution algorithms that automatically target the right job seekers across 1000's of job sites—all with a single post. That's techno lingo that translates into much less work for you along with reduced time-to-hire and greater ROI for&nbsp; your organization.<br><p style="margin: 0px; text-align: center;"><br><span style="font-weight: bold; font-size: 24pt; color: #82bc00;">Hire/Got Hired Faster, Smarter, and for Less!</span><br></p><p style="margin: 0px; text-align: center;"><span style="font-weight: bold; font-size: 14pt; color: #3bb0c9;">Programmatic Job Advertising Optimized for Performance &amp; Quality</span><br></p><br><p style="margin: 0px; text-align: center;"><img src="http://images.experience.com/entry-level-jobs/wp-content/uploads/2012/03/job_search.jpg" vspace="0" hspace="0" border="0" align="middle" title="Programmatic Recruitment Advertising"  alt="Programmatic Recruitment Advertising"><br></p><p style="margin: 0px; text-align: center;"><br></p><p style="margin: 0px; text-align: center;"><span style="color: #8a8a8d;">__________________</span></p><br><p></p><p style="margin: 0px; text-align: center;"><span style="font-size: 18pt; color: #82bc00;">Save Time and Improve Applicant Quality</span><br></p><br>It's time to forget about the time-consuming process of choosing where to post your jobs with no guarantee of results. It's time to stop worrying if the wrong clicks from irrelevant job seekers will consume your CPC budget. Let SkillsMatcher help you take back your precious time and peace of mind. We automate the process of advertising your open requisitions and get them to the right job seekers, on the right sites, at the right time. <p style="margin: 0px; text-align: center;"><span style="color: #8a8a8d;">__________________<br><br></span></p><p style="margin: 0px; text-align: center;"><span style="font-size: 18pt; color: #82bc00;">Reduce Your Time-to-Hire and Improve Your ROI</span></p><br>SkillsMatcher  offers flexible hiring solutions for mid-to-large employers that work  hand-in-hand with your hiring strategies, needs, and budget. Best of all, getting  started is easy. One of our talent acquisition experts can help you determine the best option for your organization. <ul><li><p style="margin: 0px; text-align: left;"><span style="color: #3bb0c9;"></span> Risk-free Pay-Per-Applicant Service</p></li><li><p style="margin: 0px; text-align: left;">Bulk Performance-Based Posting Packages</p></li><li><p style="margin: 0px; text-align: left;">Monthly Subscription Packages<br></p></li></ul><div class="text-center">                    
+
+		</div><p style="margin: 0px; text-align: center;"><span style="color: #8a8a8d;">__________________<br><br></span></p><p style="margin: 0px; text-align: center;"><span style="font-size: 18pt; color: #82bc00;">Learn More</span></p><p style="margin: 0px; text-align: center;"><br></p><p style="margin: 0px; text-align: left;">SkillsMatcher's recruitment advertising platform is designed to deliver performance, quality and value when it comes to sourcing top talent. <br></p><p style="margin: 0px; text-align: center;"><span style="font-size: 18pt;"><br></span></p><div class="text-center">                    <p style="margin: 0px; text-align: center;">                        </p></div><br></span></span>
+
+        </div>
+    </div>
 
 </template>
 
+
+<template name="Company">
+<img  src="https://ugacareercenter.files.wordpress.com/2013/01/skills.jpg"  width="150" height="100">
+
+	<div class="navbar navbar-default" role="navigation">
+	<div class="navbar-collapse ">
+	<ul class="nav navbar-nav navbar-right">
+	{{> loginButtons}}
+	</ul>
+	<div class="row">
+	<ul class="nav navbar-nav navbar-left">
+		<li><a href="/">Home</a></li>
+		<li><a href="/new-applicant">Applicants</a></li>
+		<li><a href="/new-company">Companies</a></li>
+		<li><a href="/new-job">Post Job</a></li>
+		<li><a href="/list-applicants">Matched Applicants</a></li>
+		<li><a href="#">About</a></li>
+
+	</ul>
+	</div>
+	</div>
+	</div> 
+<div class="image">
+
+
+<img id="mainimg" src="http://m.c.lnkd.licdn.com/mpr/mpr/p/8/005/0b7/2e1/007b75f.jpg" 
+alt="SkillsMatcher" >
+<h2><span>SkillsMatcher:<span class='spacer'></span><br /><span class='spacer'></span>Rea!Match</span></h2>
+</div>
+
+<div class="body-section container soultion">
+        <div class="col-lg-4 col-md-4 ">
+            <h3>
+                <span id="ctl00_ctl00_body_PageItem2"><span><span style="font-weight: bold;">Quality Applicants</span> </span></span>
+            </h3>
+        </div>
+        <div class="col-lg-8 col-md-8 body-content">
+            <span id="ctl00_ctl00_body_PageItem3"><span class="UnderBannerText">SkillsMatcher aims to help many companies and apllicants each year find the best talent fast with the only programmatic recruitment advertising platform designed to deliver superior job ad performance and higher quality applicants at the same time. Our data-driven recruitment solution features the industry’s most advanced job matching technology and ad distribution algorithms that automatically target the right job seekers across 1000's of job sites—all with a single post. That's techno lingo that translates into much less work for you along with reduced time-to-hire and greater ROI for&nbsp; your organization.<br><p style="margin: 0px; text-align: center;"><br><span style="font-weight: bold; font-size: 24pt; color: #82bc00;">Hire/Got Hired Faster, Smarter, and for Less!</span><br></p><p style="margin: 0px; text-align: center;"><span style="font-weight: bold; font-size: 14pt; color: #3bb0c9;">Programmatic Job Advertising Optimized for Performance &amp; Quality</span><br></p><br><p style="margin: 0px; text-align: center;"><img src="http://images.experience.com/entry-level-jobs/wp-content/uploads/2012/03/job_search.jpg" vspace="0" hspace="0" border="0" align="middle" title="Programmatic Recruitment Advertising"  alt="Programmatic Recruitment Advertising"><br></p><p style="margin: 0px; text-align: center;"><br></p><p style="margin: 0px; text-align: center;"><span style="color: #8a8a8d;">__________________</span></p><br><p></p><p style="margin: 0px; text-align: center;"><span style="font-size: 18pt; color: #82bc00;">Save Time and Improve Applicant Quality</span><br></p><br>It's time to forget about the time-consuming process of choosing where to post your jobs with no guarantee of results. It's time to stop worrying if the wrong clicks from irrelevant job seekers will consume your CPC budget. Let SkillsMatcher help you take back your precious time and peace of mind. We automate the process of advertising your open requisitions and get them to the right job seekers, on the right sites, at the right time. <p style="margin: 0px; text-align: center;"><span style="color: #8a8a8d;">__________________<br><br></span></p><p style="margin: 0px; text-align: center;"><span style="font-size: 18pt; color: #82bc00;">Reduce Your Time-to-Hire and Improve Your ROI</span></p><br>SkillsMatcher  offers flexible hiring solutions for mid-to-large employers that work  hand-in-hand with your hiring strategies, needs, and budget. Best of all, getting  started is easy. One of our talent acquisition experts can help you determine the best option for your organization. <ul><li><p style="margin: 0px; text-align: left;"><span style="color: #3bb0c9;"></span> Risk-free Pay-Per-Applicant Service</p></li><li><p style="margin: 0px; text-align: left;">Bulk Performance-Based Posting Packages</p></li><li><p style="margin: 0px; text-align: left;">Monthly Subscription Packages<br></p></li></ul><div class="text-center">                    
+
+		</div><p style="margin: 0px; text-align: center;"><span style="color: #8a8a8d;">__________________<br><br></span></p><p style="margin: 0px; text-align: center;"><span style="font-size: 18pt; color: #82bc00;">Learn More</span></p><p style="margin: 0px; text-align: center;"><br></p><p style="margin: 0px; text-align: left;">SkillsMatcher's recruitment advertising platform is designed to deliver performance, quality and value when it comes to sourcing top talent. <br></p><p style="margin: 0px; text-align: center;"><span style="font-size: 18pt;"><br></span></p><div class="text-center">                    <p style="margin: 0px; text-align: center;">                        </p></div><br></span></span>
+
+        </div>
+    </div>
+
+</template>
+
+
+ -->

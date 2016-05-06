@@ -1,22 +1,56 @@
 <template name="applicantList">
   <div class="row">
     <div class="col-xs-4 col-xs-offset-4">
-      <h1>Applicants</h1>
+      <h1>Best Matched Applicants</h1>
       <hr />
     </div>
   </div>
 
+<div class="well cover">
+<div class="well">
+<div class="row">
+ <div class="form-group">
+        <label class="col-xs-3 control-label">Job Name</label>
+        <div class="col-xs-5">
+            <select class="form-control" name="jobName">
+                {{#each Jobs}}
+                <option class="{{this}}" value="{{jobName}}"> {{jobName}}</option>
+                {{/each}}
+            </select>
+        </div>
+         <div class="form-group">
+          <div class="col-xs-12">
+            <button id="match" class="btn btn-default">Match</button>
+          </div>
+        </div>
+    </div>
+</div>
+</div> 
+
+{{> matchApplicant}}
+
+</div>
+ </template>
+
+
+<template name ="matchApplicant"> 
+{{#each Applicants}}
+<h4>{{applicantName}}</h4>
+<div class="well">
   <div class="row">
-    <div class="col-xs-4 col-xs-offset-4">
-      {{ #each Applicants }}
-        <h4>{{ applicantName }}</h4>
-        {{ #if createdByUser }}
-<!--         <p><strong> Name:</strong> {{ Name }}</p> -->
-        <p><strong>Email:</strong> {{ email }}</p>
-        <p><strong>Skills:</strong> {{skills }}</p>
-        {{ /if}}
-        <br />
-      {{ /each }}
+    <h4>Contact Information</h4>
+    <div class="col-xs-6 col-xs-offset-2">
+      <p><strong>Email:</strong><a href="mailto:{{ email }}">{{ email }}</a></p>
+      <p><strong>Phone Number:</strong> <a href="tel:{{ phoneNumber }}">{{ phoneNumber }}</a></p>
+        <p><strong>Skills/level: </strong></p>
+        {{#each skills }}
+          {{this.skill}}: {{this.level}}
+        {{/each}}
+        <br/>
     </div>
   </div>
+  </div>
+{{ /each }}
+
+
 </template>

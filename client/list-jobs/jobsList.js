@@ -1,16 +1,10 @@
 
 if(Meteor.isClient) {
-Template.matchApplicant.helpers({
-  'Applicants': function() {
-    return Applicants.find();
-  }
 
-});
 
-Template.applicantList.helpers({
+Template.jobList.helpers({
 	'Jobs': function() {
-   	var currentUserId= Meteor.userId();
-	return Jobs.find({},{createdBy:currentUserId})
+	return Jobs.find()
   }
   });
 
