@@ -82,3 +82,7 @@ div {
     margin-right: auto;
     margin-left: auto;
 }
+
+#items li a{
+	color: white;
+}
