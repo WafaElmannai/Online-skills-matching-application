@@ -83,6 +83,17 @@ div {
     margin-left: auto;
 }
 
-#items li a{
+#items li a {
 	color: white;
+}
+
+#rigthItem li a{
+  color: white;
+}
+
+
+.mainFooter {
+  padding: 1% 2%;
+  background-color: black;
+  color: white;
 }

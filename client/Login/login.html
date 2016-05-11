@@ -1,0 +1,46 @@
+
+
+
+<template name="createAccount">
+ <form class="sign-up">
+    <h1 class="sign-up-title">Sign up with SkillsMatcher</h1>
+    <input type="text" class="sign-up-input" name="signupEmail" placeholder="Enter your email!" autofocus>
+    <input type="password" class="sign-up-input" name="signupPassword" placeholder="Choose a password">
+
+    <input name="type" type="radio" value="applicant"/> Applicant
+    <input name="type" type="radio" value="company"/> Company
+    <span class="Message"></span>
+    <input type="submit" value="Sign me up!" class="sign-up-button">
+    <div class="footer-panel">
+      <div class="row">
+        <div class=" col-md-offset-5 col-md-7">
+          <span>Already have an account?<a href="/login"> Log in</a></span>
+          </div>
+        </div>
+    </div>
+  </form>
+</template>
+
+<template name="login">
+  <form class="login">
+    <h1 class="login-title">Sign In with SkillsMatcher</h1>
+    <input type="text" class="sign-up-input" name="loginEmail" placeholder="Enter your email!" autofocus>
+    <input type="password" class="sign-up-input" name="loginPassword" placeholder="Choose a password">
+    <span class="Message"></span>
+    <input type="submit" value="Sign in" class="login-button">
+    <div class="footer-panel">
+      <div class="row">
+        <div class="col-md-12">
+          <span>Forget Your Password?<a href="#"> Forget Password</a></span>
+        </div>
+        <div class=" col-md-12">
+          <span>Don't you have an account?<a href="/create-account"> SignUp</a></span>
+        </div>
+      </div>
+    </div>
+  </form>
+</template>
+
+<template name="Userlogout">
+  <a href="/logout" class="logout">Logout</a>
+</template>

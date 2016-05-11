@@ -32,10 +32,10 @@ Template.newApplicantForm.events({
     const phoneNumber = template.find('#phoneNumber').value;
     var skills=[];
     var inputElementslevel =[];
-     inputElementslevel= document.getElementsByClassName('level0');
+    inputElementslevel= document.getElementsByClassName('level0');
     var inputElementsskills =  Session.get ('SkillsList');
-  for(i=0; i< inputElementsskills.length; i++){
-    var level = $("."+inputElementsskills[i]+":checked").val();
+    for(i=0; i< inputElementsskills.length; i++){
+        var level = $("."+inputElementsskills[i]+":checked").val();
     skills.push({'skill':inputElementsskills[i], 'level':level});
   }
 
