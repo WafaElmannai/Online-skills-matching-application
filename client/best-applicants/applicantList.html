@@ -12,9 +12,9 @@
  <div class="form-group">
         <label class="col-xs-3 control-label">Job Name</label>
         <div class="col-xs-5">
-            <select class="form-control" name="jobName">
-                {{#each Jobs}}
-                <option class="{{this}}" value="{{jobName}}"> {{jobName}}</option>
+            <select id="JobName" class="form-control" name="jobName">
+                {{#each JobsList}}
+                <option value="{{this._id}}" class="{{this}}"> {{jobName}}</option>
                 {{/each}}
             </select>
         </div>
@@ -43,9 +43,9 @@
       <p><strong>Email:</strong><a href="mailto:{{ email }}">{{ email }}</a></p>
       <p><strong>Phone Number:</strong> <a href="tel:{{ phoneNumber }}">{{ phoneNumber }}</a></p>
         <p><strong>Skills/level: </strong></p>
-        {{#each skills }}
+<!--         {{skills}}
           {{this.skill}}: {{this.level}}
-        {{/each}}
+        {{/each}} -->
         <br/>
     </div>
   </div>

@@ -30,21 +30,20 @@ Template.newJobForm.events({
     const jobName = template.find('#jobName').value;
     const jobType = template.find('#jobType').value;
     const jobDescription = template.find('#jobDescription').value;
-
     var jobSkills=[];
     var inputElementslevel =[];
      inputElementslevel= document.getElementsByClassName('level0');
     var inputElementsskills =  Session.get ('SkillsList');
   for(i=0; i< inputElementsskills.length; i++){
     var level = $("."+inputElementsskills[i]+":checked").val();
-    skills.push({'skill':inputElementsskills[i], 'level':level});
+    jobSkills.push({'skill':inputElementsskills[i], 'level':level});
   }
-
+console.log(jobSkills);
     const newJob = {
       jobName: jobName,
       jobType: jobType,
       jobDescription: jobDescription, 
-      skills: skills,
+      skills: jobSkills,
       createdBy: Meteor.userId()
     }
     Meteor.call('jobs.insert', newJob);
