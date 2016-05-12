@@ -36,29 +36,41 @@ Template.applicantList.events({
           var skillJob = Jobs.findOne({_id:jobId}).skills;
           var applicants= Applicants.find().fetch();
           var applicantsSkills = [];
+          var validApplicants=[];
           for (var i = 0; i < applicants.length; i++) {
-          	applicantsSkills.push(applicants[i].skills)
-          }
-         console.log(applicantsSkills);
-         console.log(skillJob);
+          	// applicantsSkills.push(applicants[i].skills)
+          	var currentApplicantSkills=[];
+          	for (var j = 0; j < applicants[i].skills.length; j++) {
+          		currentApplicantSkills.push(applicants[i].skills[j].skill);          		
+          	}
+          	//console.log(currentApplicantSkills);
+          	for (var k = 0; k< skillJob.length; k++) {
+          		for (var m = 0; m < currentApplicantSkills.length; m++) {
+          			if(skillJob[k].skill === currentApplicantSkills[m])
+          			{
+          				validApplicants.push(applicants[i]);
+          			}
+          		}
+          	
+}
 
-         for (var i = 0; i < skillJob.length; i++) {
-         	for (var j = 0; j < applicantsSkills.length; j++) {
-         		if(skillJob.skills[i].skill===applicantsSkills.skills[j].skill)
-         		{
-					
-         		}
-         	}
-         	
-         }
-         console.log(applicantsSkills);
-          if ($('#JobName').val())
-            {
-              var JSkills=skillJob.skills;
-              for (var i = 0; i < JSkills.length; i++) {
-                score=0;                
-              }
-            }
+
+
+          }
+
+         console.log(validApplicants);
+         // console.log(skillJob);
+
+
+         
+        // console.log(applicantsSkills);
+          // if ($('#JobName').val())
+          //   {
+          //     var JSkills=skillJob.skills;
+          //     for (var i = 0; i < JSkills.length; i++) {
+          //       score=0;                
+          //     }
+          //   }
         
   
   }
